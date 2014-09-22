@@ -5,8 +5,7 @@
 //  Created by Justin Spahr-Summers on 2014-06-25.
 //  Copyright (c) 2014 GitHub. All rights reserved.
 //
-
-import swiftz_core
+import Foundation
 
 /// A push-driven stream that sends the same values to all observers.
 ///
@@ -497,8 +496,8 @@ public final class Signal<T> {
 
 	/// Returns a Promise that will wait for the first value from the receiver
 	/// that passes the given predicate.
-	public func firstPassingTest(pred: T -> Bool) -> Promise<T> {
-		return Promise { sink in
+	public func firstPassingTest(pred: T -> Bool) -> _Promise<T> {
+		return _Promise { sink in
 			self.take(1).observe { value in
 				if pred(value) {
 					sink.put(value)

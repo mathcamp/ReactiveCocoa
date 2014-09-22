@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
 
-import swiftz_core
-
 extension RACDisposable: Disposable {}
 extension RACScheduler: DateScheduler {
 	public func schedule(action: () -> ()) -> Disposable? {
@@ -78,8 +76,8 @@ extension RACSignal {
 	/// Creates a Promise that will subscribe to a RACSignal when started, and
 	/// yield the signal's _last_ value (or the given default value, if none are
 	/// sent) after it has completed successfully.
-	public func asPromiseOfLastValue(defaultValue: AnyObject? = nil) -> Promise<Result<AnyObject?>> {
-		return Promise { sink in
+	public func asPromiseOfLastValue(defaultValue: AnyObject? = nil) -> _Promise<Result<AnyObject?>> {
+		return _Promise { sink in
 			let next = { (obj: AnyObject?) -> () in
 				sink.put(.Value(Box(obj)))
 			}
@@ -148,13 +146,13 @@ extension Signal {
 	}
 }
 
-extension Promise {
+extension _Promise {
 	/// Creates a "warm" RACSignal that will start the promise upon the first
 	/// subscription, and share the result with all subscribers.
 	///
 	/// evidence - Used to prove to the typechecker that the receiver will
 	///            produce an object. Simply pass in the `identity` function.
-	public func asReplayedRACSignal<U: AnyObject>(evidence: Promise<T> -> Promise<U>) -> RACSignal {
+	public func asReplayedRACSignal<U: AnyObject>(evidence: _Promise<T> -> _Promise<U>) -> RACSignal {
 		return RACSignal.createSignal { subscriber in
 			let evidencedSelf = evidence(self)
 			let selfDisposable = evidencedSelf.notify { result in

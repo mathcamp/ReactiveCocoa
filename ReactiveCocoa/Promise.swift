@@ -12,7 +12,7 @@ private enum PromiseState<T> {
 }
 
 /// Represents deferred work to generate a value of type T.
-public final class Promise<T> {
+public final class _Promise<T> {
 	private let state: Atomic<PromiseState<T>>
 	private let sink: SinkOf<T?>
 
@@ -101,8 +101,8 @@ public final class Promise<T> {
 
 	/// Creates a Promise that will start the receiver, then run the given
 	/// action and forward the results.
-	public func then<U>(action: T -> Promise<U>) -> Promise<U> {
-		return Promise<U> { sink in
+	public func then<U>(action: T -> _Promise<U>) -> _Promise<U> {
+		return _Promise<U> { sink in
 			let disposable = SerialDisposable()
 
 			disposable.innerDisposable = self.notify { result in

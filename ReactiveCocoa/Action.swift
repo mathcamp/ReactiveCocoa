@@ -5,15 +5,14 @@
 //  Created by Justin Spahr-Summers on 2014-07-01.
 //  Copyright (c) 2014 GitHub. All rights reserved.
 //
-
-import swiftz_core
+import Foundation
 
 /// Represents a UI action that will perform some work when executed.
 public final class Action<Input, Output> {
 	public typealias ExecutionSignal = Signal<Result<Output>?>
 
 	private let scheduler: Scheduler
-	private let executeClosure: Input -> Promise<Result<Output>>
+	private let executeClosure: Input -> _Promise<Result<Output>>
 	private let executionsSink: SinkOf<ExecutionSignal?>
 
 	/// A signal of the signals returned from execute().
@@ -87,7 +86,7 @@ public final class Action<Input, Output> {
 
 	/// Initializes an action that will be conditionally enabled, and create
 	/// a Promise for each execution.
-	public init(enabledIf: Signal<Bool>, scheduler: Scheduler = MainScheduler(), execute: Input -> Promise<Result<Output>>) {
+	public init(enabledIf: Signal<Bool>, scheduler: Scheduler = MainScheduler(), execute: Input -> _Promise<Result<Output>>) {
 		(executions, executionsSink) = Signal.pipeWithInitialValue(nil)
 		executeClosure = execute
 		self.scheduler = scheduler
@@ -99,7 +98,7 @@ public final class Action<Input, Output> {
 	}
 
 	/// Initializes an action that will create a Promise for each execution.
-	public convenience init(scheduler: Scheduler = MainScheduler(), execute: Input -> Promise<Result<Output>>) {
+	public convenience init(scheduler: Scheduler = MainScheduler(), execute: Input -> _Promise<Result<Output>>) {
 		self.init(enabledIf: .constant(true), scheduler: scheduler, execute: execute)
 	}
 
@@ -148,7 +147,7 @@ public final class Action<Input, Output> {
 			.map { (a, b) in a && b }
 
 		return Action<Input, NewOutput>(enabledIf: bothEnabled) { input in
-			return Promise { sink in
+			return _Promise { sink in
 				self
 					.execute(input)
 					.map { maybeResult -> Signal<Result<NewOutput>?> in

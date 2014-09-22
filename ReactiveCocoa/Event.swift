@@ -5,8 +5,7 @@
 //  Created by Justin Spahr-Summers on 2014-06-02.
 //  Copyright (c) 2014 GitHub. All rights reserved.
 //
-
-import swiftz_core
+import Foundation
 
 /// Represents a stream event.
 ///

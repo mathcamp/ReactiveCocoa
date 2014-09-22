@@ -5,6 +5,7 @@
 //  Created by Justin Spahr-Summers on 2014-06-02.
 //  Copyright (c) 2014 GitHub. All rights reserved.
 //
+import Foundation
 
 /// Represents a serial queue of work items.
 public protocol Scheduler {

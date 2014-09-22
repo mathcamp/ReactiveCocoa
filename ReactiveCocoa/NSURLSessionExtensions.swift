@@ -5,8 +5,7 @@
 //  Created by Justin Spahr-Summers on 2014-07-03.
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
-
-import swiftz_core
+import Foundation
 
 extension NSURLSession {
 	/// Returns a Producer that will fetch data for each Consumer using the

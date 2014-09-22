@@ -6,8 +6,6 @@
 //  Copyright (c) 2014 GitHub. All rights reserved.
 //
 
-import swiftz_core
-
 extension Optional {
 	internal func optional<U>(#ifNone: @autoclosure () -> U, ifSome: T -> U) -> U {
 		if let value = self {

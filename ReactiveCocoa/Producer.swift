@@ -5,8 +5,7 @@
 //  Created by Justin Spahr-Summers on 2014-06-25.
 //  Copyright (c) 2014 GitHub. All rights reserved.
 //
-
-import swiftz_core
+import Foundation
 
 /// A stream that will begin generating Events when a Consumer is attached,
 /// possibly performing some side effects in the process. Events are pushed to
@@ -295,8 +294,8 @@ public struct Producer<T> {
 
 	/// Returns a Promise that will, when started, produce one event from the
 	/// receiver then cancel production.
-	public func first() -> Promise<Event<T>> {
-		return Promise { sink in
+	public func first() -> _Promise<Event<T>> {
+		return _Promise { sink in
 			self.take(1).produce(Consumer(sink))
 			return ()
 		}
@@ -304,7 +303,7 @@ public struct Producer<T> {
 
 	/// Returns a Promise that will start event production, then yield an Event
 	/// which indicates whether production succeeded, or failed with an error.
-	public func last() -> Promise<Event<()>> {
+	public func last() -> _Promise<Event<()>> {
 		return ignoreValues().first()
 	}
 
@@ -426,7 +425,7 @@ public struct Producer<T> {
 		}
 	}
 
-	private func retry(behavior: (NSError, Int) -> Promise<Bool>, consumer: Consumer<T>, attempt: Int, disposable: SerialDisposable) {
+	private func retry(behavior: (NSError, Int) -> _Promise<Bool>, consumer: Consumer<T>, attempt: Int, disposable: SerialDisposable) {
 		disposable.innerDisposable = self.produce { event in
 			switch event {
 			case let .Error(error):
@@ -461,7 +460,7 @@ public struct Producer<T> {
 	/// Returns a Producer that will pass through the receiver's events until
 	/// an error occurs, then pass through the events from any retry attempts.
 	/// If retrying is declined at any point, the Producer will send the error.
-	public func retry(behavior: (NSError, Int) -> Promise<Bool>) -> Producer<T> {
+	public func retry(behavior: (NSError, Int) -> _Promise<Bool>) -> Producer<T> {
 		return Producer { consumer in
 			let serialDisposable = SerialDisposable()
 			consumer.disposable.addDisposable(serialDisposable)

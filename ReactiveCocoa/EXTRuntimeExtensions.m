@@ -15,6 +15,7 @@
 #import <stdio.h>
 #import <stdlib.h>
 #import <string.h>
+#import "NSInvocation+RACTypeParsing.h"
 
 rac_propertyAttributes *rac_copyPropertyAttributes (objc_property_t property) {
     const char * const attrString = property_getAttributes(property);
