@@ -5,6 +5,7 @@
 //  Created by Justin Spahr-Summers on 2014-07-02.
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
+import Foundation
 
 extension RACDisposable: Disposable {}
 extension RACScheduler: DateScheduler {
