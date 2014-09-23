@@ -6,6 +6,7 @@
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
 import Foundation
+import MathCampFramework
 
 extension RACDisposable: Disposable {}
 extension RACScheduler: DateScheduler {
