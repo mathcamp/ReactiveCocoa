@@ -51,7 +51,7 @@ extension RACSignal {
 			}
 
 			let error = { (maybeError: NSError?) -> () in
-				let nsError = maybeError.orDefault(RACError.Empty.error)
+				let nsError = maybeError ?? RACError.Empty.error
 				consumer.put(.Error(nsError))
 			}
 
@@ -85,7 +85,7 @@ extension RACSignal {
 			}
 
 			let error = { (maybeError: NSError?) -> () in
-				let nsError = maybeError.orDefault(RACError.Empty.error)
+				let nsError = maybeError ?? RACError.Empty.error
 				sink.put(.Error(nsError))
 			}
 

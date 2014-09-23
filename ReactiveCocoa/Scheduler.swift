@@ -75,7 +75,7 @@ public final class MainScheduler: DateScheduler {
 
 /// A scheduler backed by a serial GCD queue.
 public final class QueueScheduler: DateScheduler {
-	internal let queue = dispatch_queue_create("com.github.ReactiveCocoa.QueueScheduler", DISPATCH_QUEUE_SERIAL)
+	public let queue = dispatch_queue_create("com.github.ReactiveCocoa.QueueScheduler", DISPATCH_QUEUE_SERIAL)
 
 	/// Initializes a scheduler that will target the given queue with its work.
 	///
