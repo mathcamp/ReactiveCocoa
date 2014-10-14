@@ -14,71 +14,71 @@ FOUNDATION_EXPORT double ReactiveCocoaVersionNumber;
 //! Project version string for ReactiveCocoa.
 FOUNDATION_EXPORT const unsigned char ReactiveCocoaVersionString[];
 
-#import <MathCampFramework/EXTKeyPathCoding.h>
-#import <MathCampFramework/NSArray+RACSequenceAdditions.h>
-#import <MathCampFramework/NSData+RACSupport.h>
-#import <MathCampFramework/NSDictionary+RACSequenceAdditions.h>
-#import <MathCampFramework/NSEnumerator+RACSequenceAdditions.h>
-#import <MathCampFramework/NSFileHandle+RACSupport.h>
-#import <MathCampFramework/NSNotificationCenter+RACSupport.h>
-#import <MathCampFramework/NSObject+RACDeallocating.h>
-#import <MathCampFramework/NSObject+RACLifting.h>
-#import <MathCampFramework/NSObject+RACPropertySubscribing.h>
-#import <MathCampFramework/NSObject+RACSelectorSignal.h>
-#import <MathCampFramework/NSOrderedSet+RACSequenceAdditions.h>
-#import <MathCampFramework/NSSet+RACSequenceAdditions.h>
-#import <MathCampFramework/NSString+RACSequenceAdditions.h>
-#import <MathCampFramework/NSString+RACSupport.h>
-#import <MathCampFramework/NSIndexSet+RACSequenceAdditions.h>
-#import <MathCampFramework/NSURLConnection+RACSupport.h>
-#import <MathCampFramework/NSUserDefaults+RACSupport.h>
-#import <MathCampFramework/RACBehaviorSubject.h>
-#import <MathCampFramework/RACChannel.h>
-#import <MathCampFramework/RACCommand.h>
-#import <MathCampFramework/RACCompoundDisposable.h>
-#import <MathCampFramework/RACDisposable.h>
-#import <MathCampFramework/RACEvent.h>
-#import <MathCampFramework/RACGroupedSignal.h>
-#import <MathCampFramework/RACKVOChannel.h>
-#import <MathCampFramework/RACMulticastConnection.h>
-#import <MathCampFramework/RACQueueScheduler.h>
-#import <MathCampFramework/RACReplaySubject.h>
-#import <MathCampFramework/RACScheduler.h>
-#import <MathCampFramework/RACScopedDisposable.h>
-#import <MathCampFramework/RACSequence.h>
-#import <MathCampFramework/RACSerialDisposable.h>
-#import <MathCampFramework/RACSignal+Operations.h>
-#import <MathCampFramework/RACSignal.h>
-#import <MathCampFramework/RACStream.h>
-#import <MathCampFramework/RACSubject.h>
-#import <MathCampFramework/RACSubscriber.h>
-#import <MathCampFramework/RACSubscriptingAssignmentTrampoline.h>
-#import <MathCampFramework/RACTargetQueueScheduler.h>
-#import <MathCampFramework/RACTestScheduler.h>
-#import <MathCampFramework/RACTuple.h>
-#import <MathCampFramework/RACUnit.h>
+#import <EXTKeyPathCoding.h>
+#import <NSArray+RACSequenceAdditions.h>
+#import <NSData+RACSupport.h>
+#import <NSDictionary+RACSequenceAdditions.h>
+#import <NSEnumerator+RACSequenceAdditions.h>
+#import <NSFileHandle+RACSupport.h>
+#import <NSNotificationCenter+RACSupport.h>
+#import <NSObject+RACDeallocating.h>
+#import <NSObject+RACLifting.h>
+#import <NSObject+RACPropertySubscribing.h>
+#import <NSObject+RACSelectorSignal.h>
+#import <NSOrderedSet+RACSequenceAdditions.h>
+#import <NSSet+RACSequenceAdditions.h>
+#import <NSString+RACSequenceAdditions.h>
+#import <NSString+RACSupport.h>
+#import <NSIndexSet+RACSequenceAdditions.h>
+#import <NSURLConnection+RACSupport.h>
+#import <NSUserDefaults+RACSupport.h>
+#import <RACBehaviorSubject.h>
+#import <RACChannel.h>
+#import <RACCommand.h>
+#import <RACCompoundDisposable.h>
+#import <RACDisposable.h>
+#import <RACEvent.h>
+#import <RACGroupedSignal.h>
+#import <RACKVOChannel.h>
+#import <RACMulticastConnection.h>
+#import <RACQueueScheduler.h>
+#import <RACReplaySubject.h>
+#import <RACScheduler.h>
+#import <RACScopedDisposable.h>
+#import <RACSequence.h>
+#import <RACSerialDisposable.h>
+#import <RACSignal+Operations.h>
+#import <RACSignal.h>
+#import <RACStream.h>
+#import <RACSubject.h>
+#import <RACSubscriber.h>
+#import <RACSubscriptingAssignmentTrampoline.h>
+#import <RACTargetQueueScheduler.h>
+#import <RACTestScheduler.h>
+#import <RACTuple.h>
+#import <RACUnit.h>
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-	#import <MathCampFramework/UIActionSheet+RACSignalSupport.h>
-	#import <MathCampFramework/UIAlertView+RACSignalSupport.h>
-	#import <MathCampFramework/UIBarButtonItem+RACCommandSupport.h>
-	#import <MathCampFramework/UIButton+RACCommandSupport.h>
-	#import <MathCampFramework/UICollectionReusableView+RACSignalSupport.h>
-	#import <MathCampFramework/UIControl+RACSignalSupport.h>
-	#import <MathCampFramework/UIDatePicker+RACSignalSupport.h>
-	#import <MathCampFramework/UIGestureRecognizer+RACSignalSupport.h>
-	#import <MathCampFramework/UIImagePickerController+RACSignalSupport.h>
-	#import <MathCampFramework/UIRefreshControl+RACCommandSupport.h>
-	#import <MathCampFramework/UISegmentedControl+RACSignalSupport.h>
-	#import <MathCampFramework/UISlider+RACSignalSupport.h>
-	#import <MathCampFramework/UIStepper+RACSignalSupport.h>
-	#import <MathCampFramework/UISwitch+RACSignalSupport.h>
-	#import <MathCampFramework/UITableViewCell+RACSignalSupport.h>
-	#import <MathCampFramework/UITextField+RACSignalSupport.h>
-	#import <MathCampFramework/UITextView+RACSignalSupport.h>
+	#import <UIActionSheet+RACSignalSupport.h>
+	#import <UIAlertView+RACSignalSupport.h>
+	#import <UIBarButtonItem+RACCommandSupport.h>
+	#import <UIButton+RACCommandSupport.h>
+	#import <UICollectionReusableView+RACSignalSupport.h>
+	#import <UIControl+RACSignalSupport.h>
+	#import <UIDatePicker+RACSignalSupport.h>
+	#import <UIGestureRecognizer+RACSignalSupport.h>
+	#import <UIImagePickerController+RACSignalSupport.h>
+	#import <UIRefreshControl+RACCommandSupport.h>
+	#import <UISegmentedControl+RACSignalSupport.h>
+	#import <UISlider+RACSignalSupport.h>
+	#import <UIStepper+RACSignalSupport.h>
+	#import <UISwitch+RACSignalSupport.h>
+	#import <UITableViewCell+RACSignalSupport.h>
+	#import <UITextField+RACSignalSupport.h>
+	#import <UITextView+RACSignalSupport.h>
 #elif TARGET_OS_MAC
-	#import <MathCampFramework/NSControl+RACCommandSupport.h>
-	#import <MathCampFramework/NSControl+RACTextSignalSupport.h>
-	#import <MathCampFramework/NSObject+RACAppKitBindings.h>
-	#import <MathCampFramework/NSText+RACSignalSupport.h>
+	#import <NSControl+RACCommandSupport.h>
+	#import <NSControl+RACTextSignalSupport.h>
+	#import <NSObject+RACAppKitBindings.h>
+	#import <NSText+RACSignalSupport.h>
 #endif
