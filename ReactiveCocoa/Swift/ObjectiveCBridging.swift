@@ -45,8 +45,8 @@ extension QueueScheduler {
 	}
 }
 
-private func defaultNSError(message: String, #file: String, #line: Int) -> NSError {
-	return Result<(), NSError>.error(message: message, file: file, line: line)
+private func defaultNSError(function: String, #file: String, #line: Int) -> NSError {
+	return Result<(), NSError>.error(function: function, file: file, line: line)
 }
 
 extension RACSignal {
