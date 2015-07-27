@@ -1,4 +1,5 @@
 import Result
+import Foundation
 
 /// A push-driven stream that sends Events over time, parameterized by the type
 /// of values being sent (`T`) and the type of error that can occur (`E`). If no

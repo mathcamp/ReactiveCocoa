@@ -5,6 +5,8 @@
 ///
 /// Actions enforce serial execution. Any attempt to execute an action multiple
 /// times concurrently will return an error.
+import Foundation
+
 public final class Action<Input, Output, Error: ErrorType> {
 	private let executeClosure: Input -> SignalProducer<Output, Error>
 	private let eventsObserver: Signal<Event<Output, Error>, NoError>.Observer
