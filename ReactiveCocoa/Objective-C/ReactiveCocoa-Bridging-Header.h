@@ -11,3 +11,6 @@
 #import "RACSignal+Operations.h"
 #import "RACStream.h"
 #import "RACSubscriber.h"
+#import "RACDynamicPropertySuperclass.h"
+#import "NSObject+RACPropertySubscribing.h"
+#import "NSObject+RACDeallocating.h"
