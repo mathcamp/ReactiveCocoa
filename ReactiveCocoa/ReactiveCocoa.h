@@ -14,77 +14,77 @@ FOUNDATION_EXPORT double ReactiveCocoaVersionNumber;
 //! Project version string for ReactiveCocoa.
 FOUNDATION_EXPORT const unsigned char ReactiveCocoaVersionString[];
 
-//#import <ReactiveCocoa/EXTKeyPathCoding.h>
-//#import <ReactiveCocoa/EXTScope.h>
-#import <ReactiveCocoa/NSArray+RACSequenceAdditions.h>
-#import <ReactiveCocoa/NSData+RACSupport.h>
-#import <ReactiveCocoa/NSDictionary+RACSequenceAdditions.h>
-#import <ReactiveCocoa/NSEnumerator+RACSequenceAdditions.h>
-#import <ReactiveCocoa/NSFileHandle+RACSupport.h>
-#import <ReactiveCocoa/NSNotificationCenter+RACSupport.h>
-#import <ReactiveCocoa/NSObject+RACDeallocating.h>
-#import <ReactiveCocoa/NSObject+RACLifting.h>
-#import <ReactiveCocoa/NSObject+RACPropertySubscribing.h>
-#import <ReactiveCocoa/NSObject+RACSelectorSignal.h>
-#import <ReactiveCocoa/NSOrderedSet+RACSequenceAdditions.h>
-#import <ReactiveCocoa/NSSet+RACSequenceAdditions.h>
-#import <ReactiveCocoa/NSString+RACSequenceAdditions.h>
-#import <ReactiveCocoa/NSString+RACSupport.h>
-#import <ReactiveCocoa/NSIndexSet+RACSequenceAdditions.h>
-#import <ReactiveCocoa/NSURLConnection+RACSupport.h>
-#import <ReactiveCocoa/NSUserDefaults+RACSupport.h>
-#import <ReactiveCocoa/RACBehaviorSubject.h>
-#import <ReactiveCocoa/RACChannel.h>
-#import <ReactiveCocoa/RACCommand.h>
-#import <ReactiveCocoa/RACCompoundDisposable.h>
-#import <ReactiveCocoa/RACDisposable.h>
-#import <ReactiveCocoa/RACDynamicPropertySuperclass.h>
-#import <ReactiveCocoa/RACEvent.h>
-#import <ReactiveCocoa/RACGroupedSignal.h>
-#import <ReactiveCocoa/RACKVOChannel.h>
-#import <ReactiveCocoa/RACMulticastConnection.h>
-#import <ReactiveCocoa/RACQueueScheduler.h>
-#import <ReactiveCocoa/RACQueueScheduler+Subclass.h>
-#import <ReactiveCocoa/RACReplaySubject.h>
-#import <ReactiveCocoa/RACScheduler.h>
-#import <ReactiveCocoa/RACScheduler+Subclass.h>
-#import <ReactiveCocoa/RACScopedDisposable.h>
-#import <ReactiveCocoa/RACSequence.h>
-#import <ReactiveCocoa/RACSerialDisposable.h>
-#import <ReactiveCocoa/RACSignal+Operations.h>
-#import <ReactiveCocoa/RACSignal.h>
-#import <ReactiveCocoa/RACStream.h>
-#import <ReactiveCocoa/RACSubject.h>
-#import <ReactiveCocoa/RACSubscriber.h>
-#import <ReactiveCocoa/RACSubscriptingAssignmentTrampoline.h>
-#import <ReactiveCocoa/RACTargetQueueScheduler.h>
-#import <ReactiveCocoa/RACTestScheduler.h>
-#import <ReactiveCocoa/RACTuple.h>
-#import <ReactiveCocoa/RACUnit.h>
+#import "ReactiveCocoa/Objective-C/extobjc/EXTKeyPathCoding.h"
+#import "ReactiveCocoa/Objective-C/extobjc/EXTScope.h"
+#import "ReactiveCocoa/Objective-C/NSArray+RACSequenceAdditions.h"
+#import "ReactiveCocoa/Objective-C/NSData+RACSupport.h"
+#import "ReactiveCocoa/Objective-C/NSDictionary+RACSequenceAdditions.h"
+#import "ReactiveCocoa/Objective-C/NSEnumerator+RACSequenceAdditions.h"
+#import "ReactiveCocoa/Objective-C/NSFileHandle+RACSupport.h"
+#import "ReactiveCocoa/Objective-C/NSNotificationCenter+RACSupport.h"
+#import "ReactiveCocoa/Objective-C/NSObject+RACDeallocating.h"
+#import "ReactiveCocoa/Objective-C/NSObject+RACLifting.h"
+#import "ReactiveCocoa/Objective-C/NSObject+RACPropertySubscribing.h"
+#import "ReactiveCocoa/Objective-C/NSObject+RACSelectorSignal.h"
+#import "ReactiveCocoa/Objective-C/NSOrderedSet+RACSequenceAdditions.h"
+#import "ReactiveCocoa/Objective-C/NSSet+RACSequenceAdditions.h"
+#import "ReactiveCocoa/Objective-C/NSString+RACSequenceAdditions.h"
+#import "ReactiveCocoa/Objective-C/NSString+RACSupport.h"
+#import "ReactiveCocoa/Objective-C/NSIndexSet+RACSequenceAdditions.h"
+#import "ReactiveCocoa/Objective-C/NSURLConnection+RACSupport.h"
+#import "ReactiveCocoa/Objective-C/NSUserDefaults+RACSupport.h"
+#import "ReactiveCocoa/Objective-C/RACBehaviorSubject.h"
+#import "ReactiveCocoa/Objective-C/RACChannel.h"
+#import "ReactiveCocoa/Objective-C/RACCommand.h"
+#import "ReactiveCocoa/Objective-C/RACCompoundDisposable.h"
+#import "ReactiveCocoa/Objective-C/RACDisposable.h"
+#import "ReactiveCocoa/Objective-C/RACDynamicPropertySuperclass.h"
+#import "ReactiveCocoa/Objective-C/RACEvent.h"
+#import "ReactiveCocoa/Objective-C/RACGroupedSignal.h"
+#import "ReactiveCocoa/Objective-C/RACKVOChannel.h"
+#import "ReactiveCocoa/Objective-C/RACMulticastConnection.h"
+#import "ReactiveCocoa/Objective-C/RACQueueScheduler.h"
+#import "ReactiveCocoa/Objective-C/RACQueueScheduler+Subclass.h"
+#import "ReactiveCocoa/Objective-C/RACReplaySubject.h"
+#import "ReactiveCocoa/Objective-C/RACScheduler.h"
+#import "ReactiveCocoa/Objective-C/RACScheduler+Subclass.h"
+#import "ReactiveCocoa/Objective-C/RACScopedDisposable.h"
+#import "ReactiveCocoa/Objective-C/RACSequence.h"
+#import "ReactiveCocoa/Objective-C/RACSerialDisposable.h"
+#import "ReactiveCocoa/Objective-C/RACSignal+Operations.h"
+#import "ReactiveCocoa/Objective-C/RACSignal.h"
+#import "ReactiveCocoa/Objective-C/RACStream.h"
+#import "ReactiveCocoa/Objective-C/RACSubject.h"
+#import "ReactiveCocoa/Objective-C/RACSubscriber.h"
+#import "ReactiveCocoa/Objective-C/RACSubscriptingAssignmentTrampoline.h"
+#import "ReactiveCocoa/Objective-C/RACTargetQueueScheduler.h"
+#import "ReactiveCocoa/Objective-C/RACTestScheduler.h"
+#import "ReactiveCocoa/Objective-C/RACTuple.h"
+#import "ReactiveCocoa/Objective-C/RACUnit.h"
 
 #ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
-	#import <ReactiveCocoa/MKAnnotationView+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIActionSheet+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIAlertView+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIBarButtonItem+RACCommandSupport.h>
-	#import <ReactiveCocoa/UIButton+RACCommandSupport.h>
-	#import <ReactiveCocoa/UICollectionReusableView+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIControl+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIDatePicker+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIGestureRecognizer+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIImagePickerController+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIRefreshControl+RACCommandSupport.h>
-	#import <ReactiveCocoa/UISegmentedControl+RACSignalSupport.h>
-	#import <ReactiveCocoa/UISlider+RACSignalSupport.h>
-	#import <ReactiveCocoa/UIStepper+RACSignalSupport.h>
-	#import <ReactiveCocoa/UISwitch+RACSignalSupport.h>
-	#import <ReactiveCocoa/UITableViewCell+RACSignalSupport.h>
-	#import <ReactiveCocoa/UITableViewHeaderFooterView+RACSignalSupport.h>
-	#import <ReactiveCocoa/UITextField+RACSignalSupport.h>
-	#import <ReactiveCocoa/UITextView+RACSignalSupport.h>
+	#import "ReactiveCocoa/Objective-C/MKAnnotationView+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIActionSheet+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIAlertView+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIBarButtonItem+RACCommandSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIButton+RACCommandSupport.h"
+	#import "ReactiveCocoa/Objective-C/UICollectionReusableView+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIControl+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIDatePicker+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIGestureRecognizer+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIImagePickerController+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIRefreshControl+RACCommandSupport.h"
+	#import "ReactiveCocoa/Objective-C/UISegmentedControl+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UISlider+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UIStepper+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UISwitch+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UITableViewCell+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UITableViewHeaderFooterView+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UITextField+RACSignalSupport.h"
+	#import "ReactiveCocoa/Objective-C/UITextView+RACSignalSupport.h"
 #elif TARGET_OS_MAC
-	#import <ReactiveCocoa/NSControl+RACCommandSupport.h>
-	#import <ReactiveCocoa/NSControl+RACTextSignalSupport.h>
-	#import <ReactiveCocoa/NSObject+RACAppKitBindings.h>
-	#import <ReactiveCocoa/NSText+RACSignalSupport.h>
+	#import "ReactiveCocoa/NSControl+RACCommandSupport.h"
+	#import "ReactiveCocoa/NSControl+RACTextSignalSupport.h"
+	#import "ReactiveCocoa/NSObject+RACAppKitBindings.h"
+	#import "ReactiveCocoa/NSText+RACSignalSupport.h"
 #endif
