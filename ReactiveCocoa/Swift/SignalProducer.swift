@@ -1,4 +1,4 @@
-import Result
+// import Result
 import Foundation
 
 /// A SignalProducer creates Signals that can produce values of type `T` and/or

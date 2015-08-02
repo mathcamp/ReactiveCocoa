@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 GitHub, Inc. All rights reserved.
 //
 
-import Result
+// import Result
 
 extension RACDisposable: Disposable {}
 extension RACScheduler: DateSchedulerType {

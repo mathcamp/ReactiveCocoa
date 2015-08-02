@@ -6,8 +6,8 @@
 //  Copyright (c) 2015 GitHub. All rights reserved.
 //
 
-import Box
-import Result
+// import Box
+// import Result
 
 /// Represents a signal event.
 ///

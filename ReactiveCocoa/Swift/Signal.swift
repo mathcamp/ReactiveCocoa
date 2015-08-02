@@ -1,4 +1,4 @@
-import Result
+// import Result
 import Foundation
 
 /// A push-driven stream that sends Events over time, parameterized by the type

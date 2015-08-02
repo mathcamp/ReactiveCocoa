@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import Result
+// import Result
 
 extension NSNotificationCenter {
 	/// Returns a producer of notifications posted that match the given criteria.
